@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Title</title>
+</head>
+<body>
+<style>
+.hidden {
+    display: none;
+
+}
+
+form {
+    padding: 50px 20px;
+    background-color: #e75b1e;
+    max-width: 320px;
+    margin: auto;
+    position: relative;
+    border-radius: 10px;
+}
+form input {
+    width: 100%;
+    margin-bottom: 10px;
+
+</style>
+
+<div class="hidden">
+    <form id="form">
+        <input type="text" name="name" placeholder="Ваше имя" /><br>
+        <input type="text" name="phone" id="phone" placeholder="Телефон" /><br>
+        <button>Отправить</button>
+    </form>
+    <script>
+        //Код jQuery, установливающий маску для ввода телефона элементу input
+        //1. После загрузки страницы,  когда все элементы будут доступны выполнить...
+        $(function(){
+            //2. Получить элемент, к которому необходимо добавить маску
+            $("#phone").mask("8(999) 999-9999");
+        });
+    </script>
+</div>
+<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
+
+</body>
+</html>
